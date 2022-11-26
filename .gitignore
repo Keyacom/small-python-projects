@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+## Custom gitignore defs
+# VSCode files (no configuration)
+
+.vscode/*
+!.vscode/*.json
+
+# JetBrains IDE (PyCharm, etc.) files
+.idea/
