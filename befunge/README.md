@@ -55,3 +55,7 @@ Each statement in Befunge is a single character.
 
 The `-h` option, which can be written as `--help` or `-?`, displays a help message
 and exits.
+
+## Plans
+
+- [ ] Create an editor for Befunge code with prompt-toolkit
