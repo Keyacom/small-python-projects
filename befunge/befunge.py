@@ -58,21 +58,15 @@ class Befunge:
                 case "+" | "-" | "*" | "/" | "%" | "`":
                     a = self.stack.pop()
                     b = self.stack.pop()
-                    self.stack.append(
-                        int(
-                            eval(
-                                "{}{}{}".format(
-                                    b,
-                                    ">"
-                                    if char == "`"
-                                    else "//"
-                                    if char == "/"
-                                    else char,
-                                    a,
-                                )
-                            )
-                        )
-                    )
+                    ops = {
+                        "+": "__add__",
+                        "-": "__sub__",
+                        "*": "__mul__",
+                        "/": "__floordiv__",
+                        "%": "__mod__",
+                        "`": "__gt__"
+                    }
+                    self.stack.append(int(getattr(b, ops[char])(a)))
                 case "!":
                     c = self.stack.pop()
                     self.stack.append(int(not c))
