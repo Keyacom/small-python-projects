@@ -41,9 +41,11 @@ Each statement in Befunge is a single character.
 
 ## CLI usage
 
-### `python3 befunge.py INFILE [-o OUTFILE] [-W WIDTH] [-H HEIGHT]`
+### `python3 befunge.py [-i INFILE] [-o OUTFILE] [-W WIDTH] [-H HEIGHT]`
 
-* `INFILE`: Specify the file name the Befunge code should be run from.
+* `-i INFILE`: Specify the file name the Befunge code should be run from. If missing, read lines from stdin.
+  * This means that to stop a program if you didn't specify this argument, you need to input a <kbd>Ctrl</kbd> + <kbd>D</kbd> (on Unix) or <kbd>Ctrl</kbd> +  <kbd>Z</kbd> (on Windows), then hit <kbd>Return</kbd> to exit.
+  * Aliases: `--input`
 * `-o OUTFILE`: Specify the output file. If not specified, print everything to stdout.
   * Aliases: `--output`
 * `-W WIDTH`: Specify the width of a Befunge program in characters. Defaults to 80.

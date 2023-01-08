@@ -64,7 +64,7 @@ class Befunge:
                         "*": "__mul__",
                         "/": "__floordiv__",
                         "%": "__mod__",
-                        "`": "__gt__"
+                        "`": "__gt__",
                     }
                     self.stack.append(int(getattr(b, ops[char])(a)))
                 case "!":
@@ -181,9 +181,11 @@ Parse Befunge code. Currently, reading code is supported only from files.""",
         add_help=False,
     )
     arg_parser.add_argument(
-        "input",
+        "-i",
+        "--input",
         type=argparse.FileType("r", encoding="utf8"),
-        help="\x1b[7mInput file\x1b[0m",
+        help="\x1b[7mInput file\x1b[0m: if missing, defaults to sys.stdin.",
+        default=sys.stdin,
     )
     arg_parser.add_argument(
         "-o",
