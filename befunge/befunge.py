@@ -177,7 +177,7 @@ if __name__ == "__main__":
 
     arg_parser = argparse.ArgumentParser(
         description="""\
-Parse Befunge code. Currently, reading code is supported only from files.""",
+Parse Befunge code.""",
         add_help=False,
     )
     arg_parser.add_argument(
