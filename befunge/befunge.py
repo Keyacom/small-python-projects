@@ -176,8 +176,7 @@ if __name__ == "__main__":
     import argparse
 
     arg_parser = argparse.ArgumentParser(
-        description="""\
-Parse Befunge code.""",
+        description="Parse Befunge code.",
         add_help=False,
     )
     arg_parser.add_argument(
