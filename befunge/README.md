@@ -1,4 +1,4 @@
-# Befunge [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+# Befunge [![Code style: black](https://img.shields.io/badge/code_style-black-000000.svg?style=for-the-badge)](https://github.com/psf/black)
 
 A simple Befunge parser.
 
@@ -60,4 +60,4 @@ and exits.
 
 ## Plans
 
-- [ ] Create an editor for Befunge code with prompt-toolkit
+* [ ] Create an editor for Befunge code with prompt-toolkit
